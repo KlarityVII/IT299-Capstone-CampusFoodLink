@@ -189,6 +189,20 @@ class UserCRUD:
         with self.db.cursor() as cur:
             cur.execute("DELETE FROM users WHERE id = %s", (user_id,))
             return cur.rowcount > 0
+         
+         def adjust_balance(self, user_id, amount):
+    """amount can be positive (top-up) or negative (charge)."""
+    with self.db.cursor() as cur:
+        cur.execute(
+            """UPDATE users SET balance = balance + %s
+               WHERE id = %s AND balance + %s >= 0
+               RETURNING balance""",
+            (amount, user_id, amount),
+        )
+        row = cur.fetchone()
+        return row["balance"] if row else None
+
+
  
  
 # ---------------------------------------------------------------------------
