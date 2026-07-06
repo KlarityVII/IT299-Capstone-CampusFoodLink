@@ -36,12 +36,12 @@ A Capstone project where students were proposed an issue for students experienci
 ## Database Schema
 |Table Name|Column Names|
 |---|---|
-|menus|id(PK), vendor_id(FK), item_name, item_description, item_price|
-|orderItems|id(PK), order_id(FK), menu_item_id(FK), quantity, item_price(FK), price_total(Calculated Field|
-|orders|id(PK), user_id(FK), vendor_id(FK), date_time, status, discount, total_price|
-|roles|id(PK), title, description|
-|users|id(PK), last_name, first_name, date_birth, phone_number, email, password(SHA256 encrypted), role_id(FK), balance|
-|vendors|id(PK), name, phone_number, email, address, city, state, zip_code|
+|menus|id **(PK)**, vendor_id(FK), item_name, item_description, item_price|
+|orderItems|id **(PK)**, order_id(FK), menu_item_id **(FK)**, quantity, item_price **(FK)**, price_total **(Calculated Field)**|
+|orders|id **(PK)**, user_id **(FK)**, vendor_id **(FK)**, date_time, status, discount, total_price|
+|roles|id **(PK)**, title, description|
+|users|id **(PK)**, last_name, first_name, date_birth, phone_number, email, password **(SHA256 encrypted)**, role_id **(FK)**, balance|
+|vendors|id **(PK)**, name, phone_number, email, address, city, state, zip_code|
 
 ## Constraints
 - No real payments
@@ -49,7 +49,7 @@ A Capstone project where students were proposed an issue for students experienci
 - Database and UI structure must be justifiable
 
 ## Schedule
-|Phase|Duration (estimated)|Start Date (projected)|
+|Phase|Duration (Estimated)|Start Date (Projected)|
 |---|---|---|
 |Initiation|10.25 days|6/10/26|
 |Requirements|5 days|6/22/26|
