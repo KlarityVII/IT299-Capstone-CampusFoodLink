@@ -365,6 +365,7 @@ class OrdersCRUD:
         """Hard delete, use with caution given order_items reference orders.id."""
         with self.db.cursor() as cur:
             cur.execute("DELETE FROM orders WHERE id = %s", (order_id,))
+         cur.execute("DELETE FROM order_items WHERE id = %s", (order_id,))
             return cur.rowcount > 0
  
  
