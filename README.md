@@ -10,7 +10,7 @@ A Capstone project where students were proposed an issue for students experienci
 |Richard N.|UI UX Developer/Artist|Created Wireframes/Mockups for website, credit for all graphics|
 |Jesse D.|Tester|Discovered causes for issues, ensured quality for deliverables and stakeholder satisfaction|
 
-## Stack
+## Tech Stack
 | Tool | Purpose |
 |---|---|
 |Webserver hosted by Purdue|Front-end / Back-end|
@@ -34,7 +34,7 @@ A Capstone project where students were proposed an issue for students experienci
  - QR-Based order pickup confirmation 
 
 ## Database Schema
-|TableName|ColumnNames|
+|Table Name|Column Names|
 |---|---|
 |menus|id(PK), vendor_id(FK), item_name, item_description, item_price|
 |orderItems|id(PK), order_id(FK), menu_item_id(FK), quantity, item_price(FK), price_total(Calculated Field|
