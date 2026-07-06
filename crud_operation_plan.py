@@ -51,7 +51,7 @@ class Database:
                     email TEXT UNIQUE NOT NULL,
                     password TEXT NOT NULL,
                     role INTEGER REFERENCES roles(id),
-                    balance DECIMAL DEFAULT 0
+                    balance NUMERIC(10,2) DEFAULT 0
                 )
             """)
             cur.execute("""
